@@ -5,17 +5,21 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
+import dotenv from 'dotenv'
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import {AuthProvider} from '../contexts/SignupContext'
 
-
+dotenv.config()
 function App() {
   return (
     <Router>
+      <AuthProvider>
       <Layout>
         <Switch>
               <Route  exact path="/">
@@ -35,12 +39,11 @@ function App() {
                   <Result> </Result>
               </Route>
               
-           
-        
-           
           
         </Switch>
       </Layout>
+      </AuthProvider>
+     
     </Router>
    
   );

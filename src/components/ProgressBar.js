@@ -15,7 +15,7 @@ export default function ProgressBar() {
             <div className={classes.progress} style={{width: "20%"}}></div>
           </div>
         </div>
-        <Link href="/result">
+        <Link to="/result">
             <Button className={classes.next}>
             <span>Next Question</span>
             <span className="material-icons-outlined"> arrow_forward </span>
