@@ -14,6 +14,8 @@ import {
   Link
 } from "react-router-dom";
 import {AuthProvider} from '../contexts/SignupContext'
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 dotenv.config()
 function App() {
@@ -25,19 +27,19 @@ function App() {
               <Route  exact path="/">
                   <Home /> 
               </Route>
-              <Route exact  path="/signup">
+              <PublicRoute exact  path="/signup">
                 <Signup /> 
-              </Route>
-              <Route  exact path="/login"> 
+              </PublicRoute>
+              <PublicRoute  exact path="/login"> 
                 <Login /> 
-              </Route>
+              </PublicRoute>
             
-              <Route  exact path="/quiz"> 
+              <PrivateRoute  exact path="/quiz"> 
                    <Quiz></Quiz>
-              </Route>
-              <Route  exact path="/result"> 
+              </PrivateRoute>
+              <PrivateRoute  exact path="/result"> 
                   <Result> </Result>
-              </Route>
+              </PrivateRoute>
               
           
         </Switch>

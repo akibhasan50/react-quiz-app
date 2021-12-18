@@ -19,12 +19,6 @@ export default function LoginForm() {
   async function handleSubmit(e){
     e.preventDefault()
 
-    // if(password !== confirmPassword){
-    //   return  setError('Password dont match')
-    // }else if(password.length !== 6){
-    //     return  setError('Password length must be 6 characters')
-    // }
-
     try {
         setError('')
         setLoading(true)
