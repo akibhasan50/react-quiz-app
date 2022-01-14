@@ -34,10 +34,10 @@ function App() {
                 <Login /> 
               </PublicRoute>
             
-              <PrivateRoute  exact path="/quiz"> 
+              <PrivateRoute  exact path="/quiz/:id"> 
                    <Quiz></Quiz>
               </PrivateRoute>
-              <PrivateRoute  exact path="/result"> 
+              <PrivateRoute  exact path="/result/:id"> 
                   <Result> </Result>
               </PrivateRoute>
               
