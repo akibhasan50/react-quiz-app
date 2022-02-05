@@ -38,7 +38,7 @@ export default function Quiz() {
   const { currentUser } = useAuth();
   const history = useHistory();
 
-  console.log(currentUser)
+  
   useEffect(() => {
     dispatch({
       type: "questions",
@@ -98,7 +98,7 @@ function nextQuestion() {
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
-            input
+            input={true}
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
